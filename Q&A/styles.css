@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800;9..40,900&family=Great+Vibes&family=Lobster+Two:wght@400;700&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  background-color: #f1f5f8;
+  width: 100%;
+  height: 100vh;
+}
+
+.title {
+  font-family: Great Vibes;
+  font-size: 3rem;
+  color: #c59d5f;
+  text-align: center;
+  margin: 8rem 0 3rem 0;
+}
+
+section {
+  width: 100%;
+  padding: 5rem 0;
+}
+
+.questions_list {
+  width: min(700px, 90%);
+  margin: auto;
+}
+
+.question {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+}
+
+.question_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.question_title p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  transition: all 0.3s ease;
+  font-size: 1.5rem;
+  color: #c59d5f;
+}
+
+button:hover {
+  transform: rotate(90deg);
+}
+
+.minus_icon {
+  display: none;
+}
+
+.question_text {
+  display: none;
+  border-top: 2px solid rgba(128, 128, 128, 0.253);
+  padding: 1rem 0;
+}
+
+.question_text p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: rgb(107, 107, 107);
+}
+
+.show_text .question_text {
+  display: block;
+}
+
+.show_text .minus_icon {
+  display: block;
+}
+
+.show_text .plus_icon {
+  display: none;
+}
