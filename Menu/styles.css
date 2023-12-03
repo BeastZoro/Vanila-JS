@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.title {
+  padding: 3rem 0;
+}
+
+.title h1 {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+  margin: 1rem 0;
+  font-weight: 600;
+  color: #102a42;
+  font-size: 3rem;
+}
+
+.underline {
+  width: 100px;
+  height: 5px;
+  background-color: #c59d5f;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.categories button {
+  border: 2px solid #c59d5f;
+  padding: 0.5rem 10px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: #c59d5f;
+  font-family: "Roboto";
+  font-weight: 600;
+}
+
+.categories button:hover {
+  color: white;
+  background-color: #c59d5f;
+}
+
+.menu_items {
+  width: min(1140px, 100%);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  margin: 2rem auto;
+  gap: 20px;
+}
+
+.menu_item {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  width: min(630px, 90%);
+}
+
+.menu_img {
+  width: 230px;
+  height: 170px;
+  border: 4px solid #c59d5f;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.menu_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.item_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px dotted gray;
+  padding: 10px 0;
+}
+
+.item_info p:nth-child(1) {
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  font-family: "Roboto";
+  color: #102a42;
+  font-size: 0.9rem;
+}
+
+.item_info p:nth-child(2) {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: "Roboto";
+  color: #c59d5f;
+  font-size: 0.9rem;
+}
+
+.item_desc {
+  margin: 20px 0;
+  color: #617f9b;
+  font-size: 1rem;
+  font-family: Open Sans;
+}
+
+
+@media screen and (max-width: 1220px) {
+    .menu_items {
+        grid-template-columns: auto ;
+      }
+}
+
+@media screen and (max-width: 690px) {
+    .menu_item {
+        grid-template-columns: auto ;
+        max-width: 25rem;
+      }
+
+      .menu_img {
+        width: 100%;
+        height: 200px;
+        border: 4px solid #c59d5f;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+}
