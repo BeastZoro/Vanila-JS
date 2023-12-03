@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+h1 {
+  color: white;
+  font-size: 3.5rem;
+  font-family: sans-serif;
+  letter-spacing: 3px;
+  font-weight: bolder;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+  object-fit: cover;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 0.7rem 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #49a6e9;
+  background-color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.video_controls {
+  position: absolute;
+  left: 10%;
+  bottom: 15%;
+  border-radius: 10px;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.toggler {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #49a6e9;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+
+.switch .toggler {
+  left: 50%;
+}
