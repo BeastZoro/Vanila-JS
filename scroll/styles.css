@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+header {
+  min-height: 100vh;
+  background: linear-gradient(rgba(63, 208, 212, 0.5), rgba(0, 0, 0, 0.7)),
+    url("./hero-bcg.jpeg") no-repeat;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+
+/* nav {
+  background-color: #fff;
+  padding: 1rem 1.5rem;
+  border: 2px solid;
+  width: 100%;
+} */
+
+nav {
+  background-color: transparent;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem 1.5rem;
+}
+
+.nav_wrapper {
+  width: 90wv;
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fixed_nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.7);
+}
+
+.fixed_nav .nav_links a {
+  color: #102a42;
+}
+
+.fixed_nav .nav_links a:hover {
+  color: #0c2b47;
+}
+
+.banner {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.nav_links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav_links li a {
+  color: #102a42;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.lorem {
+  color: #fff;
+  max-width: 600px;
+  margin: 25px 0;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  background-color: transparent;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #40cfd4;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+section h1 {
+  font-size: 2.5rem;
+  color: #102a42;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+section h1 span {
+  color: #40cfd4;
+}
+
+footer {
+  background-color: #102a42;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+}
