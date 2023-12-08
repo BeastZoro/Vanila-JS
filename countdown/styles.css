@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+.countdown_wrapper {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.image {
+  width: 100%;
+  margin: 30px auto;
+}
+
+.image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.info {
+}
+
+.title {
+  color: #5f80aa;
+  letter-spacing: 3px;
+  font-size: 1.3rem;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin: 10px 0 30px 0;
+}
+
+.desc {
+  color: #86a3c0;
+  font-size: 15px;
+  line-height: 1.25rem;
+}
+
+.timer_container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 50px 0 0 0;
+  max-width: 400px;
+}
+
+.timer {
+  background-color: #102a42;
+  color: white;
+  text-transform: uppercase;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  letter-spacing: 2px;
+}
+
+.timer p:nth-child(1) {
+  font-size: 1.5rem;
+}
+
+.timer p:nth-child(2) {
+  font-size: 0.9rem;
+}
+
+@media screen and (min-width: 980px) {
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .countdown_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    gap: 3rem;
+  }
+}
