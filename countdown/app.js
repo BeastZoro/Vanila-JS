@@ -6,6 +6,7 @@ const secondsEle = document.getElementById('seconds')
 const giveawayText = document.querySelector('.subtitle')
 const giveAwayTimer = document.querySelectorAll('.giveaway')
 const timer_container = document.querySelector('.timer_container')
+console.log(giveAwayTimer)
 
 
 const months = [
