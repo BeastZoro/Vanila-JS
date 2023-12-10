@@ -6,7 +6,7 @@ const secondsEle = document.getElementById('seconds')
 const giveawayText = document.querySelector('.subtitle')
 const giveAwayTimer = document.querySelectorAll('.giveaway')
 const timer_container = document.querySelector('.timer_container')
-console.log(giveAwayTimer)
+
 
 
 const months = [
@@ -34,63 +34,58 @@ const weekdays = [
 ];
 
 
+const currDate = new Date()
 
-const currTime = new Date()
+const tempYear = currDate.getFullYear()
+const tempMonth = currDate.getMonth()
+const tempDate = currDate.getDate()
 
-let currYear = currTime.getFullYear()
-let currMonth = currTime.getMonth()
-let currDay = currTime.getDay()
 
-const futureDate = new Date(currYear, currMonth, currDay + 10, 11, 30, 0)
+const futureDate = new Date(tempYear, tempMonth, tempDate + 20, 12, 30, 0)
 
-const year = futureDate.getFullYear()
-const hours = futureDate.getHours()
-const minutes = futureDate.getMinutes()
-let month = futureDate.getMonth()
+const targetYear = futureDate.getFullYear()
+const targetMonth = months[futureDate.getMonth()]
+const targetDay = weekdays[futureDate.getDay()]
+const targetDate = futureDate.getDate()
+const targetHours = futureDate.getHours()
+const targetMinutes = futureDate.getMinutes()
 
-month = months[month]
-const weekday = weekdays[futureDate.getDay()]
-const date = futureDate.getDate()
-
-giveawayText.textContent = `giveaway ends on ${weekday}, ${date} ${month} ${year} ${hours}:${minutes}am`
+giveawayText.textContent = `Giveaway Ends On ${targetDay}, ${targetDate} ${targetMonth} ${targetYear} ${targetHours}:${targetMinutes}am`
 
 
 
 const futureTime = futureDate.getTime()
 
-const getTargetTime = () => {
-    const today = new Date().getTime()
+const getRemainingTime = () => {
+    const currDay = new Date().getTime()
+    const time = futureTime - currDay
 
-    const time = futureTime - today
     const oneDay = 24 * 60 * 60 * 1000
     const oneHour = 60 * 60 * 1000
     const oneMinute = 60 * 1000
-
-
 
     let days = Math.floor(time / oneDay)
     let hours = Math.floor((time % oneDay) / oneHour)
     let minutes = Math.floor((time % oneHour) / oneMinute)
     let seconds = Math.floor((time % oneMinute) / 1000)
 
-    const values = [days, hours, minutes, seconds]
-    function format(item) {
-        if (item < 10) {
-            return (item = `0${item}`)
+    const formatTime = (item) =>{
+        if(item < 10){
+            return `0${item}`
         }
         return item
     }
 
-    giveAwayTimer.forEach((item, index) => {
-        item.innerHTML = format(values[index])
+    const timeValues = [days, hours, minutes, seconds]
+    giveAwayTimer.forEach((timer, index) => {
+        timer.innerHTML = formatTime(timeValues[index])
     })
-
-    if (time <= 0) {
+    if (time < 0) {
         clearInterval(countdown)
-        timer_container.innerHTML = `<h4 class="expired">sorry, this giveaway has expired!</h4>`
+        giveawayText.innerHTML = `<h4> sorry this giveaway has expired! </h4>`
     }
 }
-
-let countdown = setInterval(getTargetTime, 1000);
-
-getTargetTime()
+let countdown = setInterval(() => {
+    getRemainingTime()
+}, 1000);
+getRemainingTime()
