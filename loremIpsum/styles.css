@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px 0;
+  text-align: center;
+  background-color: #f1f5f8;
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  margin: 50px 0 0 0;
+  color: #102a42;
+}
+
+form {
+  max-width: 600px;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  gap: 15px;
+}
+
+label {
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+
+input {
+  width: 80px;
+  margin: 0 20px 0 10px;
+  border: 0;
+  border-radius: 7px;
+  background-color: white;
+  padding: 3px 10px;
+  font-size: 1.3rem;
+  outline: none;
+  text-indent: 4px;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+button {
+  letter-spacing: 3px;
+  background-color: #49a6e9;
+  color: #083987;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  padding: 8px 10px;
+  border-radius: 7px;
+  border: 0;
+  cursor: pointer;
+  box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #7ab5df;
+  color: #083987;
+}
+
+article {
+  max-width: 650px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+article p {
+  color: #668198;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  margin: 3rem 0;
+  padding: 0 20px;
+}
