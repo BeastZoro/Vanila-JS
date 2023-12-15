@@ -1,44 +1,44 @@
-const dots = document.querySelector('.buttons')
 const slides = document.querySelectorAll('.slide')
+const dots = document.querySelector('.buttons')
 
 document.addEventListener('DOMContentLoaded', () => {
-    let activeSlide = 0;
-    let leftPosition = 0;
+    let activeSlide = 0
 
-    // handelling the position of the slides 
+    let slideX = 0
     slides.forEach((slide) => {
-        slide.style.left = `${leftPosition}%`
-        leftPosition += 100
+        slide.style.left = `${slideX}%`
+        slideX += 100
     })
 
-    // creating dots for length of the slides
+
     slides.forEach((slide, index) => {
         const dot = document.createElement('div')
-        dot.classList.add('dot')
         dot.addEventListener('click', () => {
-            slideTo(index)
+            handleSlide(index)
         })
+        dot.classList.add('dot')
         dots.appendChild(dot)
+
     })
 
 
-    // handelling active dot
-    const currentSlide = () => {
+    // handle the active dot
+    const activeDot = () => {
         const slideDots = document.querySelectorAll('.dot')
         slideDots.forEach((dot, index) => {
             dot.classList.toggle('active', index === activeSlide)
+            console.log(activeSlide)
         })
     }
 
-    // handelling the active slide
-    const slideTo = (slideIndex) => {
+    const handleSlide = (slideIndex) => {
         slides.forEach((slide) => {
             const newPosition = slideIndex * 100
-            slide.style.transform = `translateX(-${newPosition}%)`
+            slide.style.transform = `translateX(${-newPosition}%)`
         })
-        activeSlide = slideIndex
-        currentSlide()
-    }
-    currentSlide()
-})
 
+        activeSlide = slideIndex
+        activeDot()
+    }
+    activeDot()
+})
