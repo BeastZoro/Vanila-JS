@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  background-color: #f1f5f8;
+  padding: 5rem 0;
+}
+
+.section_wrapper {
+  width: min(600px, 90%);
+    min-height: fit-content;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 3rem;
+}
+
+form h1 {
+  color: #063c89;
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin: 2rem 0;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.input input {
+  border: 0;
+  text-indent: 10px;
+  padding: 5px 0;
+  flex: 1 0 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+  color: #063d89b4;
+}
+
+.input button {
+  background-color: #a5d5f8;
+  color: black;
+  text-transform: capitalize;
+  padding: 8px 1rem;
+  border: 0;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transform: all 0.3s easin;
+}
+
+.input button:hover {
+  color: white;
+  background-color: #168bdf;
+}
+
+.input button:active {
+  transform: scale(0.98);
+}
+
+.list_item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list_item button{
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  margin: 0 .5rem;
+}
+
+.list_item .edit{
+  color: green;
+}
+
+.list_item .delete{
+  color: red;
+}
+
+.list_item_value{
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  margin: .5rem 1rem;
+  cursor: pointer;
+}
